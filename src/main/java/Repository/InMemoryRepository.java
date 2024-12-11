@@ -39,7 +39,7 @@ public class InMemoryRepository implements Repository {
     @Override
     public ConnectionGroup findConnectionGroupByNodeName(Node node) {
         for (ConnectionGroup connectionGroup : connectionGroupsByName.values()) {
-            if (connectionGroup.connectionNodes().contains(node)) {
+            if (connectionGroup.getConnectionNodes().contains(node)) {
                 return connectionGroup;
             }
         }

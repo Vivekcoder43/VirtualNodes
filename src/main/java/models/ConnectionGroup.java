@@ -26,7 +26,4 @@ public class ConnectionGroup {
         this.connectionNodes = new HashSet<Node>();
     }
 
-    public Set<Node> connectionNodes() {
-        return connectionNodes;
-    }
 }
