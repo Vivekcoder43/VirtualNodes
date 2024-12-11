@@ -21,10 +21,12 @@ public class InMemoryRepository implements Repository {
         return connectionGroup;
     }
 
+    @Override
     public ConnectionGroup findByName(String name) {
         return connectionGroupsByName.get(name);
     }
 
+    @Override
     public void resetConnectionGroups() {
         for (ConnectionGroup connectionGroup : connectionGroupsByName.values()) {
             connectionGroup.setRootNode(null);
